@@ -6,6 +6,8 @@ import Image from "next/image";
 import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from '@/lib/utils'
+import Footer from "./Footer";
+// import { User } from "lucide-react";
 
 const Siderbar = ({ user }: SiderbarProps) => {
 
@@ -50,10 +52,12 @@ const Siderbar = ({ user }: SiderbarProps) => {
           );
         })}
 
-        User
+     
       </nav>
 
-      Footer
+      <Footer user={user} type="mobile" />
+
+      
     </section>
   );
 };

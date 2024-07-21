@@ -15,6 +15,8 @@ import {
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import Footer from "./Footer";
+// import { User } from "lucide-react";
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -83,7 +85,9 @@ const MobileNav = ({ user }: MobileNavProps) => {
                 USER
               </nav>
             </SheetClose>
-            Footer
+
+            <Footer user = {user}/>
+
           </div>
         </SheetContent>
       </Sheet>
