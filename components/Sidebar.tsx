@@ -7,6 +7,7 @@ import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from '@/lib/utils'
 import Footer from "./Footer";
+import PlaidLink from "./PlaidLink";
 // import { User } from "lucide-react";
 
 const Siderbar = ({ user }: SiderbarProps) => {
@@ -52,7 +53,7 @@ const Siderbar = ({ user }: SiderbarProps) => {
           );
         })}
 
-     
+        <PlaidLink  user = {user}/>
       </nav>
 
       <Footer user={user} type="mobile" />
