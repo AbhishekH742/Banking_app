@@ -66,7 +66,7 @@ const BankCard = ({
 
       </Link>
 
-      {showBalance && <Copy title={account.shareableId} />}
+      {showBalance && <Copy title={account.sharaebleId} />}
     </div>
   );
 };
