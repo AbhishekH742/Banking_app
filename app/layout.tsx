@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "ARISE",
   description: "Arise is a modern banking platform",
   icons : {
-    icon: 'public/icons/logo.svg'
+    icon: '/icons/logo.svg'
   }
 };
 
