@@ -1,0 +1,17 @@
+
+Dwolla
+https://accounts-sandbox.dwolla.com/logout
+
+Plaid
+https://dashboard.plaid.com/overview
+
+
+appwrite
+https://cloud.appwrite.io/console/project-6695227f00091d8d398a/databases
+
+shadcn
+https://ui.shadcn.com/docs/components
+
+
+Sentry
+https://abhishek-9a.sentry.io/performance/summary/?environment=development&project=4507637849587712&query=&referrer=performance-transaction-summary&statsPeriod=14d&transaction=GET+%2Fsign-up&unselectedSeries=p100%28%29&unselectedSeries=avg%28%29
