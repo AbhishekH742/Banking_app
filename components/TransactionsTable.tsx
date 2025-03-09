@@ -8,26 +8,30 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { cn, formatAmount, formatDateTime, getTransactionStatus, removeSpecialCharacters } from "@/lib/utils";
+import {
+  cn,
+  formatAmount,
+  formatDateTime,
+  getTransactionStatus,
+  removeSpecialCharacters,
+} from "@/lib/utils";
 import { transactionCategoryStyles } from "@/constants";
 
 const CategoryBadge = ({ category }: CategoryBadgeProps) => {
-    const {
-      borderColor,
-      backgroundColor,
-      textColor,
-      chipBackgroundColor,
-     } = transactionCategoryStyles[category as keyof typeof transactionCategoryStyles] || transactionCategoryStyles.default
-     
-    return (
-      <div className={cn('category-badge', borderColor, chipBackgroundColor)}>
-        <div className={cn('size-2 rounded-full', backgroundColor)} />
-        <p className={cn('text-[12px] font-medium', textColor)}>{category}</p>
-      </div>
-    )
-  } 
+  const { borderColor, backgroundColor, textColor, chipBackgroundColor } =
+    transactionCategoryStyles[
+      category as keyof typeof transactionCategoryStyles
+    ] || transactionCategoryStyles.default;
 
-const TransactionsTable = ({transactions}: TransactionTableProps) => {
+  return (
+    <div className={cn("category-badge", borderColor, chipBackgroundColor)}>
+      <div className={cn("size-2 rounded-full", backgroundColor)} />
+      <p className={cn("text-[12px] font-medium", textColor)}>{category}</p>
+    </div>
+  );
+};
+
+const TransactionsTable = ({ transactions }: TransactionTableProps) => {
   return (
     <Table>
       <TableHeader className="bg-[#f9fafb]">
@@ -41,7 +45,7 @@ const TransactionsTable = ({transactions}: TransactionTableProps) => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {transactions.map((t: Transaction) => {
+        {(transactions || []).map((t: Transaction) => {
           const status = getTransactionStatus(new Date(t.date));
           const amount = formatAmount(t.amount);
 
