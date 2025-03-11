@@ -26,7 +26,7 @@ const Siderbar = ({ user }: SiderbarProps) => {
             className="size-[24px]
             max-xl:size-14"
           />
-          <h1 className="sidebar-logo">Arise</h1>
+          <h1 className="sidebar-logo">FinSync</h1>
         </Link>
         {sidebarLinks.map((item) => {
             const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`)

@@ -12,8 +12,8 @@ variable: '--font-ibm-plex-serif'
 });
 
 export const metadata: Metadata = {
-  title: "ARISE",
-  description: "Arise is a modern banking platform",
+  title: "FinSync",
+  description: "FinSync is a modern banking platform",
   icons : {
     icon: '/icons/logo.svg'
   }
